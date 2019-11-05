@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="GitCopier:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/GitCopier_jar</output-path>
+    <root id="archive" name="GitCopier.jar">
+      <element id="module-output" name="GitCopier" />
+    </root>
+  </artifact>
+</component>
