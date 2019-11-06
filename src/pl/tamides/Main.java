@@ -6,6 +6,8 @@ import java.awt.event.MouseListener;
 
 public class Main {
 
+    private static final String PROJECT_NAME = "YTube";
+
     public static void main(String[] args) {
         String result = "Przetwarzam";
 
@@ -33,17 +35,17 @@ public class Main {
                 textView.setText("Copying...");
 
                 try {
-                    new ProcessBuilder().command("bash", "-c", "cp -a /home/rsyzdek/Git/YTubeGit/README.md /home/rsyzdek/Git/ && " +
-                            "rm -rf /home/rsyzdek/Git/YTubeGit/* && " +
-                            "cp -a /home/rsyzdek/Git/README.md /home/rsyzdek/Git/YTubeGit/ && " +
+                    new ProcessBuilder().command("bash", "-c", "cp -a /home/rsyzdek/Git/" + PROJECT_NAME + "Git/README.md /home/rsyzdek/Git/ && " +
+                            "rm -rf /home/rsyzdek/Git/" + PROJECT_NAME + "Git/* && " +
+                            "cp -a /home/rsyzdek/Git/README.md /home/rsyzdek/Git/" + PROJECT_NAME + "Git/ && " +
                             "rm -rf /home/rsyzdek/Git/README.md && " +
-                            "cp -a /home/rsyzdek/Git/YTube/build.gradle /home/rsyzdek/Git/YTubeGit/ && " +
-                            "mkdir /home/rsyzdek/Git/YTubeGit/app/ && " +
-                            "cp -a /home/rsyzdek/Git/YTube/app/build.gradle /home/rsyzdek/Git/YTubeGit/app/ && " +
-                            "mkdir /home/rsyzdek/Git/YTubeGit/app/libs && " +
-                            "cp -a /home/rsyzdek/Git/YTube/app/libs/. /home/rsyzdek/Git/YTubeGit/app/libs/ && " +
-                            "mkdir /home/rsyzdek/Git/YTubeGit/app/src && " +
-                            "cp -a /home/rsyzdek/Git/YTube/app/src/. /home/rsyzdek/Git/YTubeGit/app/src/").start();
+                            "cp -a /home/rsyzdek/Git/" + PROJECT_NAME + "/build.gradle /home/rsyzdek/Git/" + PROJECT_NAME + "Git/ && " +
+                            "mkdir /home/rsyzdek/Git/" + PROJECT_NAME + "Git/app/ && " +
+                            "cp -a /home/rsyzdek/Git/" + PROJECT_NAME + "/app/build.gradle /home/rsyzdek/Git/" + PROJECT_NAME + "Git/app/ && " +
+                            "mkdir /home/rsyzdek/Git/" + PROJECT_NAME + "Git/app/libs && " +
+                            "cp -a /home/rsyzdek/Git/" + PROJECT_NAME + "/app/libs/. /home/rsyzdek/Git/" + PROJECT_NAME + "Git/app/libs/ && " +
+                            "mkdir /home/rsyzdek/Git/" + PROJECT_NAME + "Git/app/src && " +
+                            "cp -a /home/rsyzdek/Git/" + PROJECT_NAME + "/app/src/. /home/rsyzdek/Git/" + PROJECT_NAME + "Git/app/src/").start();
 
                     textView.setText("Copied from");
                     copyTo.setEnabled(true);
@@ -81,14 +83,14 @@ public class Main {
 
                 try {
                     new ProcessBuilder().command("bash", "-c",
-                            "rm -rf /home/rsyzdek/Git/YTube/build.gradle && " +
-                                    "cp -a /home/rsyzdek/Git/YTubeGit/build.gradle /home/rsyzdek/Git/YTube/ && " +
-                                    "rm -rf /home/rsyzdek/Git/YTube/app/build.gradle && " +
-                                    "cp -a /home/rsyzdek/Git/YTubeGit/app/build.gradle /home/rsyzdek/Git/YTube/app/ && " +
-                                    "rm -rf /home/rsyzdek/Git/YTube/app/libs/* && " +
-                                    "cp -a /home/rsyzdek/Git/YTubeGit/app/libs/. /home/rsyzdek/Git/YTube/app/libs/ && " +
-                                    "rm -rf /home/rsyzdek/Git/YTube/app/src/* && " +
-                                    "cp -a /home/rsyzdek/Git/YTubeGit/app/src/. /home/rsyzdek/Git/YTube/app/src/").start();
+                            "rm -rf /home/rsyzdek/Git/" + PROJECT_NAME + "/build.gradle && " +
+                                    "cp -a /home/rsyzdek/Git/" + PROJECT_NAME + "Git/build.gradle /home/rsyzdek/Git/" + PROJECT_NAME + "/ && " +
+                                    "rm -rf /home/rsyzdek/Git/" + PROJECT_NAME + "/app/build.gradle && " +
+                                    "cp -a /home/rsyzdek/Git/" + PROJECT_NAME + "Git/app/build.gradle /home/rsyzdek/Git/" + PROJECT_NAME + "/app/ && " +
+                                    "rm -rf /home/rsyzdek/Git/" + PROJECT_NAME + "/app/libs/* && " +
+                                    "cp -a /home/rsyzdek/Git/" + PROJECT_NAME + "Git/app/libs/. /home/rsyzdek/Git/" + PROJECT_NAME + "/app/libs/ && " +
+                                    "rm -rf /home/rsyzdek/Git/" + PROJECT_NAME + "/app/src/* && " +
+                                    "cp -a /home/rsyzdek/Git/" + PROJECT_NAME + "Git/app/src/. /home/rsyzdek/Git/" + PROJECT_NAME + "/app/src/").start();
 
                     textView.setText("Copied to");
                     copyFrom.setEnabled(true);
